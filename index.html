@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 	<script src="node_modules/jquery/dist/jquery.min.js"> </script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"> </script>
+	<link src="node_modules/bootstrap/dist/css/bootstrap.min.js"> </link> -->
+	
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link href="/node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+	<title>BookLook</title>
+</head>
+<body>
+	<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="page-header">
+	    <h1>BookLook <i class="fa fa-eye" aria-hidden="true"></i></h1>
+	  </div>
+	  <script id="post-template" type="text/x-handlebars-template">
+	  	<p class="post" data-id="{{ id }}">
+	  	  <a href="#" class="remove">Remove</a>
+	  	  {{ text }}
+	  	</p>
+
+	  </script>
+
+	  <div class="posts">
+	  	<!-- This is where the handlebar stuff goes -->
+	  </div>
+
+	  <form class="post-form">
+	    <h3>Search by ISBN</h3>
+	    <div class="form-group">
+	      <input type="text" id="post-name" class="form-control" placeholder="ISBN Number">
+          </input>
+	    </div>
+
+	    <button type="button" class="btn btn-primary add-post">Search</button>
+	  </form>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</div>
+  </div>	
+
+</body>
+</html>
