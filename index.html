@@ -4,7 +4,7 @@
 <!-- 	<script src="node_modules/jquery/dist/jquery.min.js"> </script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"> </script>
 	<link src="node_modules/bootstrap/dist/css/bootstrap.min.js"> </link> -->
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -17,17 +17,14 @@
       <div class="page-header">
 	    <h1>BookLook <i class="fa fa-eye" aria-hidden="true"></i></h1>
 	  </div>
-	  <script id="post-template" type="text/x-handlebars-template">
-	  	<p class="post" data-id="{{ id }}">
-	  	  <a href="#" class="remove">Remove</a>
-	  	  {{ text }}
-	  	</p>
-
-	  </script>
-
-	  <div class="posts">
-	  	<!-- This is where the handlebar stuff goes -->
+	  <div class="search-results">
 	  </div>
+	  <script id="search-template" type="text/x-handlebars-template">
+	  	<h1>{{ title }}</h1>
+	  	<p>{{ description }}</p>
+	  	<h2>Written by: {{ author }}</h2>
+	  	<img src="{{ image }}">
+	  </script>
 
 	  <form class="post-form">
 	    <h3>Search by ISBN</h3>
@@ -36,11 +33,11 @@
           </input>
 	    </div>
 
-	    <button type="button" class="btn btn-primary add-post">Search</button>
+	    <button type="button" class="btn btn-primary add-post" id="search-btn">Search</button>
 	  </form>
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	</div>
   </div>	
-
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
